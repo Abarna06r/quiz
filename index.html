@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Interactive Quiz</h1>
+    <div id="quiz-box">
+     <div id="question-meta">
+  <div id="question-counter"></div>
+  <div id="timer">Time Left: <span id="time-left">10</span>s</div>
+</div>
+
+      <div id="question-text"></div>
+      <ul id="answer-options"></ul>
+      <div class="buttons">
+        <button id="next-btn">Next</button>
+        <button id="view-results-btn" style="display: none;">View Results</button>
+      </div>
+    </div>
+    <div id="result-box" style="display: none;">
+      <h2>Your Score: <span id="final-score"></span></h2>
+      <div id="summary"></div>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+.shake {
+  animation: shake 0.4s;
+}
+</style>
+
